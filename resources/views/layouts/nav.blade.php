@@ -9,7 +9,7 @@
                     <a class="nav-link" href="/start">Blade to Vue</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="/users">Users list</a>
                 </li>
 
             </ul>

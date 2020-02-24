@@ -8,6 +8,8 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+Vue.use(require('vue-resource'));
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -21,6 +23,11 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('prop-component', require('./components/PropComponent.vue').default);
+Vue.component('users-list-component', require('./components/UsersListComponent.vue').default);
+/*Vue.component('users-list-table-component', require('./components/UserListTableComponent.vue').default);*/
+Vue.component('users-list-table-component', require('./components/UserSearchComponent.vue').default);
+//Vue.component('pagination', require('./components/Paginator'));
+Vue.component('pagination', require('laravel-vue-pagination'));
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

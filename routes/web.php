@@ -15,7 +15,12 @@ Route::get('/', function () {
     return view('test');
 });
 
+Route::get('/users', function () {
+    return view('users.users');
+});
+
 Route::get('/start', 'StartController@index');
+//Route::get('/users', 'UserController@index');
 
 Auth::routes();
 
