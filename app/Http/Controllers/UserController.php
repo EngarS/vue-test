@@ -27,7 +27,7 @@ class UserController extends Controller
     }
 
     public function getRecords( Request $request ) {
-        //dd($request);
+
         $search_query = $request->searchTerm;
         $perPage      = $request->per_page;
         $users        = User::where( 'name', 'LIKE', '%' . $search_query . '%' )

@@ -22,23 +22,14 @@
                         </span>
                     </template>
                 </vue-good-table>
-                <!--<vue-pagination :pagination="users"
-                                @paginate="getRecords()"
-                                :offset="4">
-                </vue-pagination>-->
-                <pagination :data="users" @pagination-change-page="getRecords()"></pagination>
+                <pagination :data="users" @pagination-change-page="getRecords"></pagination>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-    //import Vue from 'vue';
-    import VueGoodTable from 'vue-good-table';
     import 'vue-good-table/dist/vue-good-table.css'
-    //import VuePagination from './Paginator';
-    //import VuePagination from './Paginator.vue';
-    //Vue.use(VueGoodTable);
     export default {
         props: ['endpoint'],
         data() {
@@ -77,16 +68,13 @@
                 rows: []
             }
         },
-        /*components: {
-            VuePagination,
-        },*/
         mounted() {
-            //console.log(axios.get(`${this.endpoint}`))
+            console.log(`${this.endpoint}`)
             this.getRecords()
         },
         methods: {
-            getRecords() {
-                return axios.get(`${this.endpoint}?searchTerm=${this.users.searchTerm}`).then((response) => {
+            getRecords(page = 1) {
+                return axios.get(`${this.endpoint}?page=${page}&searchTerm=${this.users.searchTerm}`).then((response) => {
                     this.rows = response.data.users.data
                     this.users = response.data.users
                 })
