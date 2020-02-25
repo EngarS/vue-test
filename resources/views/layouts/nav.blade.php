@@ -11,6 +11,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/users">Users list</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/ajax-to-vue">Ajax to Vue</a>
+                </li>
 
             </ul>
         </div>

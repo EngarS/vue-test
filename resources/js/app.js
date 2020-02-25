@@ -23,10 +23,10 @@ Vue.use(require('vue-resource'));
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('prop-component', require('./components/PropComponent.vue').default);
+Vue.component('ajax-component', require('./components/AjaxComponent.vue').default);
+// user list test
 Vue.component('users-list-component', require('./components/UsersListComponent.vue').default);
-/*Vue.component('users-list-table-component', require('./components/UserListTableComponent.vue').default);*/
 Vue.component('users-list-table-component', require('./components/UserSearchComponent.vue').default);
-//Vue.component('pagination', require('./components/Paginator'));
 Vue.component('pagination', require('laravel-vue-pagination'));
 
 /**

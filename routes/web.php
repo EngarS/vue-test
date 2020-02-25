@@ -18,8 +18,12 @@ Route::get('/', function () {
 Route::get('/users', function () {
     return view('users.users');
 });
+Route::get('/ajax-to-vue', function () {
+    return view('ajaxvue');
+});
 
 Route::get('/start', 'StartController@index');
+Route::get('/start/get-json', 'StartController@getJson');
 //Route::get('/users', 'UserController@index');
 
 Auth::routes();
